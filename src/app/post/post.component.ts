@@ -6,11 +6,12 @@ import { Post } from "@app/post/post.model";
   selector: "app-post",
   templateUrl: "./post.component.html",
   styleUrls: ["./post.component.scss"],
-  preserveWhitespaces:true
+  preserveWhitespaces: true
 })
 export class PostComponent implements OnInit {
   posts: Post[];
-  isLoading:boolean;
+  title = "Post List";
+  isLoading: boolean;
   constructor(private postService: PostService) {}
 
   ngOnInit() {
@@ -21,5 +22,8 @@ export class PostComponent implements OnInit {
         this.isLoading = false;
       });
     }, 2000);
+  }
+  postTitile() {
+    return this.title;
   }
 }
