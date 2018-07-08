@@ -1,6 +1,17 @@
-<p>
-  post works!
-</p>
-<pre>
-  {{posts|json}}
-</pre>
+<ng-template *ngIf="isLoading;else postTmp">
+  <app-loader [isLoading]="isLoading"></app-loader> Loading...
+</ng-template>
+<ng-template #postTmp>
+  <table class="table table-bordered">
+    <tr>
+      <td>Title</td>
+      <td>Name</td>
+      <td>Created</td>
+    </tr>
+    <tr *ngFor="let post of posts">
+      <td>{{post.title}}</td>
+      <td>{{post.name}}</td>
+      <td>{{post.created | date}}</td>
+    </tr>
+  </table>
+</ng-template>
