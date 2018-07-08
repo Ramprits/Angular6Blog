@@ -1,0 +1,22 @@
+{
+  "generator-ngx-rocket": {
+    "version": "5.0.1",
+    "props": {
+      "location": "path",
+      "appName": "Blog",
+      "target": [
+        "web"
+      ],
+      "pwa": true,
+      "ui": "bootstrap",
+      "auth": true,
+      "lazy": true,
+      "angulartics": true,
+      "analyticsProvider": "ga",
+      "googleAnalyticsAccount": "UA-121879465-1",
+      "projectName": "blog",
+      "packageManager": "npm",
+      "mobile": []
+    }
+  }
+}
